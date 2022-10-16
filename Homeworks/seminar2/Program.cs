@@ -1,6 +1,4 @@
-﻿
-Задача 10
-
+﻿Задача 10
 int number = ReadInt("Введите трехзначное число: ");
 int result = number % 100;
 if(number>99 && number<1000)
@@ -19,9 +17,7 @@ int ReadInt(string message)
 }
 
 
-
 Задача 13
-
 int number = ReadInt("Введите число: ");
 if (number>99 || number<-99)
 {
@@ -45,12 +41,10 @@ int ReadInt (string message)
 
 
 Задача 15
-
 Console.WriteLine("Задача 15 ");
 
 Console.Write("Введи цифру, обозначающую день недели: ");
 int dayNumber = Convert.ToInt32(Console.ReadLine());
-
 void CheckingTheDayOfTheWeek (int dayNumber) {
   if (dayNumber == 6 || dayNumber == 7) {
   Console.WriteLine("(этот день выходной) -> да");
