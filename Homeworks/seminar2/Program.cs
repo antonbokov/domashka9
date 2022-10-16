@@ -1,27 +1,52 @@
-﻿Задача 10:
+﻿
+Задача 10
 
-Console.Clear();
-Console.Write("Введи трёхзначное число: ");
-int threeDigitNumber = Convert.ToInt32(Console.ReadLine());
-string stringNumber = Convert.ToString(threeDigitNumber);
-Console.WriteLine("вторая цифра этого числа -> "+stringNumber[1]);
-
-
-Задача 13: 
-
-Console.Write("Введи число: ");
-int anyNumber = Convert.ToInt32(Console.ReadLine());
-string anyNumberText = Convert.ToString(anyNumber);
-if (anyNumberText.Length > 2){
-  Console.WriteLine("третья цифра -> " + anyNumberText[2]);
+int number = ReadInt("Введите трехзначное число: ");
+int result = number % 100;
+if(number>99 && number<1000)
+{
+    result=result/10;
+    Console.WriteLine("Вторая цифра введенного числа " + result);
 }
-else {
-  Console.WriteLine("-> третьей цифры нет");
+else 
+{
+    Console.WriteLine("Ошибка! Введите трехзначное число!");
+}
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
 }
 
 
 
-Задача 15: 
+Задача 13
+
+int number = ReadInt("Введите число: ");
+if (number>99 || number<-99)
+{
+    do {number = number / 10;}
+    while (number>999 || number<-999);
+    if(number<0)
+    {
+        number = number * (-1); 
+    }
+    Console.WriteLine(number%10);
+}
+else 
+{
+    Console.WriteLine("В введенном числе нет третьей цифры");
+}
+int ReadInt (string message)
+{
+    Console.WriteLine(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+
+Задача 15
+
+Console.WriteLine("Задача 15 ");
 
 Console.Write("Введи цифру, обозначающую день недели: ");
 int dayNumber = Convert.ToInt32(Console.ReadLine());
