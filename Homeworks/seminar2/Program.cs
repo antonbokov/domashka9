@@ -41,8 +41,6 @@ int ReadInt (string message)
 
 
 Задача 15
-Console.WriteLine("Задача 15 ");
-
 Console.Write("Введи цифру, обозначающую день недели: ");
 int dayNumber = Convert.ToInt32(Console.ReadLine());
 void CheckingTheDayOfTheWeek (int dayNumber) {
