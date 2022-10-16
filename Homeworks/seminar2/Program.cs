@@ -1,14 +1,14 @@
-﻿Задача 10
+﻿Задача 10: 
 
 Console.Clear();
-Console.WriteLine("Задача 10 ");
 Console.Write("Введи трёхзначное число: ");
     int threeDigitNumber = Convert.ToInt32(Console.ReadLine());
     string stringNumber = Convert.ToString(threeDigitNumber);
 Console.WriteLine("вторая цифра этого числа -> "+stringNumber[1]);
 
 
-Задача 13
+
+Задача 13:
 
 Console.Write("Введи число: ");
 int anyNumber = Convert.ToInt32(Console.ReadLine());
@@ -21,10 +21,12 @@ else {
 }
 
 
-Задача 15
+
+Задача 15:
 
 Console.Write("Введи цифру, обозначающую день недели: ");
 int dayNumber = Convert.ToInt32(Console.ReadLine());
+
 void CheckingTheDayOfTheWeek (int dayNumber) {
   if (dayNumber == 6 || dayNumber == 7) {
   Console.WriteLine("(этот день выходной) -> да");
@@ -36,4 +38,3 @@ void CheckingTheDayOfTheWeek (int dayNumber) {
 }
 CheckingTheDayOfTheWeek(dayNumber);
 
-конец
