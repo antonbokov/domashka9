@@ -1,57 +1,63 @@
-﻿Задача 25
+﻿Задача 19
 
-void PowMethod(int num, int pow)
-{
-    int result = 1;
-    if (pow <= 0)
-    {
-        Console.WriteLine("Введенная степень не является натуральной");
+Console.WriteLine("Введите число");
+string? number = Console.ReadLine();
+
+void CheckingNumber(string number){
+    if (number[0] == number[4] || number[1] == number[3]){
+    Console.WriteLine($"Ваше число:{number} - палиндром.");
     }
-    else
+
+    else 
+        Console.WriteLine($"Ваше число: {number} - не палиндром");
+    }
+    if (number!.Length == 5) {
+        CheckingNumber(number);
+    }
+    else 
+        Console.WriteLine($"Введите правильное число");
+
+
+
+Задача 21
+
+internal class Program
+{
+    private static void Main(string[] args)
     {
-        for (int i = 1; i <= pow; i++)
-            result = result * num;
-        Console.WriteLine($"Число {num} в степени {pow} равно {result}");
+        Console.WriteLine("Введите координаты точки А через пробел");
+        string xyz = Console.ReadLine()!;
+        string[] partsA = xyz.Split(' ');
+        int xA = int.Parse(partsA[0]);
+        int yA = int.Parse(partsA[1]);
+        int zA = int.Parse(partsA[2]);
+
+        Console.WriteLine("Введите координаты точки B через пробел");
+        xyz = Console.ReadLine()!;
+        string[] partsB = xyz.Split(' ');
+        int xB = int.Parse(partsB[0]);
+        int yB = int.Parse(partsB[1]);
+        int zB = int.Parse(partsB[2]);
+
+        double distsnce = Math.Sqrt(Math.Pow(xB - xA, 2) + Math.Pow(yB - yA, 2) + Math.Pow(zB - zA, 2));
+
+        Console.WriteLine($"Расстояние между точкой А и точкой B = {distsnce:F2}");
     }
 }
-Console.Write("Введите ваше число: ");
-    int num = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите натуральную степень: ");
-    int pow = Convert.ToInt32(Console.ReadLine());
-PowMethod(num, pow);
 
 
 
-Задача 27
+Задача 23
 
-void SumOfNum(int num)
+int n = ReadInt("Введите число: ");
+int count = 1;
+while (count < n + 1)
 {
-    int sum = 0;
-    while (num != 0)
-    {
-        sum = sum + num % 10;
-        num = num / 10;
-    }
-    Console.WriteLine(sum);
+    Console.Write($"{count * count * count} ");
+    count++;
 }
-Console.Write("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-SumOfNum(num);
-
-
-
-Задача 29
-
-Console.WriteLine("Введите массив из 8 чисел");
-string input = Console.ReadLine() ??"";
-string[] temp = input.Split(' ');
-
-int[] resultArray = new int[temp.Length];
-for (int i = 0; i < resultArray.Length; i++)
+int ReadInt(string message)
 {
-    resultArray[i] = int.Parse(temp[i]);
-}
-for (int i = 0; i < resultArray.Length; i++)
-{
-    Console.Write($"{resultArray[i]}, ");
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
 }
