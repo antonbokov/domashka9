@@ -55,3 +55,4 @@ for (int i = 0; i < resultArray.Length; i++)
 {
     Console.Write($"{resultArray[i]}, ");
 }
+
