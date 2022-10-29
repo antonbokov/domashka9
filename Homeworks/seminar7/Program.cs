@@ -108,8 +108,7 @@ class Program
             
             int[,] numbers = new int[n, m];
             FillArrayRandomNumbers(numbers);
-            
-            
+                  
             for (int j = 0; j < numbers.GetLength(1); j++)
             {
             double avarage = 0;
@@ -121,10 +120,8 @@ class Program
             Console.Write(avarage + "; ");
             }
             Console.WriteLine();
-            PrintArray(numbers);
-            
-            
-            
+            PrintArray(numbers);            
+                    
             void FillArrayRandomNumbers(int[,] array)
             {
             for (int i = 0; i < array.GetLength(0); i++)
@@ -154,4 +151,3 @@ class Program
     }
 
 
-    
